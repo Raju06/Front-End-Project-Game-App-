@@ -1,0 +1,28 @@
+<!-- <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile *ngIf="hero" [colspan]="1" [rowspan]="2"> -->
+
+<mat-card class="example-card" *ngIf="hero">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{hero.gameId}}</mat-card-title>
+    <mat-card-subtitle>{{hero.gameName}}</mat-card-subtitle>
+    <mat-card-subtitle>{{hero.createdOn}}</mat-card-subtitle>
+    <mat-card-subtitle>{{hero.gameType.gameRules}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image {{hero.gameImage}}>
+  <mat-card-content>
+    <p>{{hero.gameDescription}}</p>
+    <p>{{hero.gameRules}}</p>
+    <p>{{hero.gameType.gameTypeName}}</p>
+    <p>{{hero.gameType.gameTypeDescription}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>
+      <a routerLink="/play/">Play</a>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- </mat-grid-tile> 
+<br>
+</mat-grid-list> -->

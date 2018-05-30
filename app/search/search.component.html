@@ -1,0 +1,14 @@
+<input type="text" placeholder="search" aria-label="Number" matInput [formControl]="searchTerm" [matAutocomplete]="auto">
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngIf="searchResult" [value]="item">
+    <!-- <a routerLink="/searchresult/{{searchresult.name}}"> -->
+    <a routerLink="/searchresult/{{searchResult.gameName}}">{{ searchResult.gameName }}
+    </a>
+  </mat-option>
+  <mat-option *ngIf="searchResult?.length < 2">
+    <hr>
+    <p>
+      No results found
+    </p>
+  </mat-option>
+</mat-autocomplete>
